@@ -1,0 +1,8 @@
+<ul *ngIf="items$ | async as items else noData">
+  <li *ngFor="let item of items">
+      {{item.title}}
+      {{item.price}}
+  </li>
+</ul>
+<ng-template #noData>No Data Available</ng-template>
+
